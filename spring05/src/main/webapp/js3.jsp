@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<html lang="ko">
+    
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,29 +13,27 @@
   <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
   <script>
   $( function() {
-	$("#b1").click(function() {
-		$("#dialog2").css('visibility', 'visible');
-		$( "#dialog2" ).dialog();
-	});
-	
-	$("#b2").click(function() {
-		$("#dialog1").css('visibility:', 'visible');
-		$( "#dialog1" ).dialog();
-	});
-});
-  
- 
+	  $('#b1').click(function() {
+		  $( "#dialog2" ).css('visibility', 'visible')
+		  $( "#dialog2" ).dialog();
+	  })
+	  $('#b2').click(function() {
+		  $( "#dialog" ).css('visibility', 'visible')
+		  $( "#dialog" ).dialog();
+	  })
+    
+  } );
   </script>
 </head>
 <body>
  
- <button id="b1">오늘 일정은?</button>
- <button id="b2">오늘 점심 메뉴는?</button>
-<div id="dialog1" title="오늘 점심 메뉴는?">
-  <p style="visibility: hidden">궁금하네요</p>
+<button id="b1">오늘 일정은?</button>
+<button id="b2">오늘 점심메뉴는?</button>
+<div id="dialog" title="오늘 점심메뉴는?" style="visibility: hidden;">
+  <p> 국밥을 먹을 예정. </p>
 </div>
-<div id="dialog2" title="오늘 일정은?">
-  <p style="visibility:hidden">수업!!!</p>
+<div id="dialog2" title="오늘 일정은?"  style="visibility: hidden;">
+  <p> 수업!! 수업!! 집으로.!!! </p>
 </div>
  
  

@@ -6,36 +6,52 @@
     <script type="text/javascript">
       google.charts.load('current', {'packages':['corechart']});
       google.charts.setOnLoadCallback(drawChart);
-
+      
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['하는일', '시간'],
-          ['수업', 8],
-          ['식사', 3],
-          ['이동', 2],
+          ['하는 일', '시간'],
+          ['수업',     8],
+          ['식사',      3],
+          ['이동',  2],
           ['운동', 1],
-          ['잠', 7],
-          ['여가시간', 3]
+          ['공부', 3],
+          ['잠자',    7]
         ]);
 
         var options = {
-          title: '일상'
+          title: 'My Daily Activities'
         };
 
         var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
         chart.draw(data, options);
+        
+        
+        /* -------------------- */
+        var data2 = google.visualization.arrayToDataTable([
+            ['하는 일2', '시간2'],
+            ['수업2',     8],
+            ['식사2',      3],
+            ['이동2',  2],
+            ['운동2', 1],
+            ['공부2', 3],
+            ['잠자2',    7]
+          ]);
+
+          var options2 = {
+            title: 'i am title'
+          };
+
+          var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+          chart2.draw(data2, options2);
+          
       }
     </script>
   </head>
   <body>
     <div id="piechart" style="width: 300px; height: 300px;"></div>
+    <div id="piechart2" style="width: 300px; height: 300px;"></div>
   </body>
 </html>
-['Month', '시간급',  '인상률'],
-          ['2015',  5,580,      7.1],
-          ['2016',  6,030,      8.1],
-          ['2017',  6,470,      7.3],
-          ['2018',  7,530,      16.4],
-          ['2029',  8,530,      10.9]
