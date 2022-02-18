@@ -1,0 +1,22 @@
+package third_project;
+
+public class While2 {
+
+	public static void main(String[] args) {
+		int sum = 0;
+		int init = 1;
+		int i = 1;
+		int end = 100;
+		
+		while(i<=end) {
+			sum += i;
+			if(i == 100) {
+				break;
+			}
+			i++;
+		}
+		
+		System.out.println(init+"~"+end+" гу:"+sum);
+	}
+
+}

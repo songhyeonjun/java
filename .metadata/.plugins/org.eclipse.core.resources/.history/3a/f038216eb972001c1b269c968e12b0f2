@@ -1,0 +1,14 @@
+package jdbc;
+
+import java.sql.Connection;
+
+public class JDBC_Insert {
+	public static void main(String[] args) {
+		Connection con = null;
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

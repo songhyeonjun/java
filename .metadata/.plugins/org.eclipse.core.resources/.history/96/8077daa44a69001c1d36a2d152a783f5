@@ -1,0 +1,20 @@
+package third_project;
+
+public class StringEquals {
+
+	public static void main(String[] args) {
+		String strVar1 = "자바";
+		String strVar2 = "자바";
+		
+		if(strVar1 == strVar2) {
+			System.out.println("strVar1과 strVar2는 참조가 같음");
+		} else {
+			System.out.println("strVar1과 strVar2는 참조가 다름");
+		}
+		
+		if(strVar1.equals(strVar2)) {
+			System.out.println("strVar1과 strVar2는 문자값이 같음.");
+		}
+	}
+
+}

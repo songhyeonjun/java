@@ -1,0 +1,13 @@
+package pack02.subPack;
+
+public class PHONE {
+	String name; // 선언! 전역변수!(global)
+	String color;
+	int num;
+	boolean onOff;
+	
+		public String toString() {
+		
+		return name + ", " + color + ", " + num + ", " + onOff;
+	}
+}

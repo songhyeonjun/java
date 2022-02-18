@@ -1,0 +1,51 @@
+<%@page import="web.MemberDAO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	íìí©ëë¤â¦.<br>
+	<hr color='red'>
+	<form action="create.jsp">
+	ìì´ë : <input type="text" name="id"><br>
+	í¨ì¤ìë : <input type="text" name="pw"><br>
+	ì´ë¦ : <input type="text" name="name"><br>
+	ì íë²í¸ : <input type="text" name="tel"><br>
+	<button>íìê°ì ìì²­</button>
+	</form>
+	<br>
+	<hr color="blue">
+	<form action="login.jsp">
+	ìì´ë : <input type="text" name="id"><br>
+	í¨ì¤ìë : <input type="text" name="pw"><br>
+	<button style=background:yellow;color:red;width:100px;>íìë¡ê·¸ì¸ ìì²­</button>
+	</form>
+	<br>
+	<hr color="blue">
+	<form action="update.jsp">
+	<input type="text" name="id" ><br>
+	ì íë²í¸ : <input type="text" name="tel"><br>
+	<button>íììì  ìì²­</button>
+	</form>
+	<br>
+	<hr color="blue">
+	<form action="one.jsp">
+	ìì´ë : <input type="text" name="id"><br>
+	<button>íìì ë³´ ê²ì ìì²­</button>
+	</form>
+	<br>
+	<hr color="blue">
+	<form action="delete.jsp">
+	ìì´ë : <input type="text" name="id"><br>
+	<button>íìì­ì  ìì²­</button>
+	</form>
+	<a href="delete.jsp?id=apple">
+		<button>íìíí´ë²í¼</button>
+	</a><br>
+	<a href="list.jsp"><button style='color:yellow;background: red;'>ì ì²´ íì ëª©ë¡</button></a>
+	</body>
+</html>

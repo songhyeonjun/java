@@ -1,0 +1,49 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/**
+ * @author hi
+ * 학생 추가
+ */
+public class JDBC_Insert {
+	public static void main(String[] args) {
+		Connection con = null;
+		Statement  stm = null;
+		String url  = "jdbc:mariadb://localhost:3306/sharedb";
+		String user = "sharedb";
+		String pw   = "p@ss00";
+		String query = "INSERT INTO(s_name, s_gender) VALUES ('홍길동','1')";
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			con = DriverManager.getConnection(url, user, pw);
+			stm = con.createStatement();
+			stm.execute(query);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} finally {
+			if(stm != null) {
+				try {
+					stm.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			if(con != null) {
+				try {
+					con.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}

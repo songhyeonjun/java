@@ -1,0 +1,27 @@
+package third_project;
+
+import java.util.Scanner;
+
+public class While2 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int sum = 0;
+		int init = Integer.parseInt(scanner.nextLine());
+		int i = init;
+		int end = 100;
+		
+		while(i<=end) {
+			sum += i;
+			if(i == 100) {
+				break;
+			}
+			i++;
+		}
+		
+		System.out.println(init+"~"+end+" гу:"+sum);
+	}
+
+}

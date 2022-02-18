@@ -1,0 +1,21 @@
+package third_project;
+
+import java.util.Scanner;
+
+public class Ex1 {
+
+	public static void main(String[] args) {
+		boolean run = true;
+		
+		int balance = 0;
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("--------------------------");
+			System.out.println("1.예금|2.출금|3.잔고|4.종료");
+			System.out.println("--------------------------");
+			System.out.println("선택>");
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package jdbc;
+
+
+
+public class JDBC_Test {
+
+	public static void main(String[] args) {
+		Connection con = null;
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			//Class.forName("org.postgresql.Driver");
+			System.out.println("JDBC 드라이버 로딩 성공~");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			System.out.println("무조건 실행~");
+		}
+	}
+
+}

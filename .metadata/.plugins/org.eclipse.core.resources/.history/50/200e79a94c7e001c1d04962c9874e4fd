@@ -1,0 +1,22 @@
+package object;
+
+class Animal {
+	String name;
+	
+	void setName(String name) {
+		this.name = name;
+	}
+}
+
+class Dog extends Animal {
+	
+}
+
+public class Sample2 {
+
+	public static void main(String[] args) {
+		// TODO 자동 생성된 메소드 스텁
+
+	}
+
+}

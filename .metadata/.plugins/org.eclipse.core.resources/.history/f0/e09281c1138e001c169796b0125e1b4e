@@ -1,0 +1,32 @@
+<%@page import="web.BoardDAO"%>
+<%@page import="web.BoardVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+ <%
+	MemberDAO memberDAO = new MemberDAO();
+	
+	int m_idx = Integer.parseInt(request.getParameter("m_idx"));
+	// �������� ȸ�������� �������� �Լ�
+	MemberVO memberVO = memberDAO.member_view(m_idx);
+	
+	// ȸ������ ���� �Լ�
+	memberDAO.member_delete(m_idx);
+	
+	response.setContentType("text/html;charset=utf-8");
+	PrintWriter out = response.getWriter();
+	
+	out.print("<script>");
+	out.print("alert('"+memberVO.getM_name()+"���� ���� �Ǿ����ϴ�..');");
+	out.print("location = '"+request.getContextPath()+"/memberList';");
+	out.print("</script>");
+ %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

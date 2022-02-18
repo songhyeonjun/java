@@ -1,0 +1,74 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원상세정보</title>
+<link rel="stylesheet" type="text/css" href="${contextPath}/css/style.css"/>
+<script>
+    	function board_del(value, idx){
+    		if(confirm(value+" 회원을 정말로 삭제하시겠습니까?")){
+    			location.href = "${contextPath}/boardDelete?m_idx="+idx;
+    		}
+    	}
+    </script>
+
+</head>
+<body>
+<div class="container">
+	<div class="section">
+<h2>(${board.m_name}님 회원정보.)</h2>
+<table class="bluetop">
+			
+				<tr>
+				<th>이름</th>
+				<td>${board.m_name}</td>
+				</tr>
+				
+				<tr>
+				<th>아이디</th>
+				<td>${board.m_id}</td>
+				</tr>
+				
+				<tr>
+				<th>이메일</th>
+				<td>${board.m_email}</td>
+				</tr>
+				
+				<tr>
+				<th>핸드폰</th>
+				<td>${board.m_phone}</td>
+				</tr>
+				
+				<tr>
+				<th>사진</th>
+				<td>${board.m_file}</td>
+				</tr>
+				
+				<tr>
+				<th>수정일</th>
+				<td>
+				<fmt:formatDate value="${board.m_mdfydate}" pattern="yyyy-MM-dd hh:mm"/></td>
+				</tr>
+				
+				<tr>
+				<th>등록일</th>
+				<td><fmt:formatDate value="${board.m_rgstdate}" pattern="yyyy-MM-dd hh:mm"/></td>
+				</tr>
+			</table>
+			<div class="btns">
+				<button class="btn_style_submit" onclick="location.href='${contextPath}/list.jsp'">게시판 목록</button>
+				<button class="btn_style_edit" onclick="location.href='${contextPath}/mdfy.jsp?idx=${board.idx}'">수정</button>
+				<button class="btn_style_delete" onclick="board_del('${board.title}', ${board.m_idx})">삭제</button>
+			
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

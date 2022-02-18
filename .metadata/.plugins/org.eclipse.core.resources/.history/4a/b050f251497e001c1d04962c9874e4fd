@@ -1,0 +1,27 @@
+package object;
+
+import java.util.Scanner;
+
+class Calculator {
+	
+	//버스 : 641번, 사람들을 태운다.,
+	//영등포에서 강남을 지나 다시 영등포로 오는 순환 경로
+	//내가 타야하는 저기 641번 버스는 영등포에서 출발해서
+	//강남을 지나 영등포로 다시 돌아오는 순환버스이다.
+	int result = 0;
+	int add(int num) {
+		result += num;
+		return result;
+	}
+}
+public class Sample {
+
+	public static void main(String[] args) {
+		// TODO 자동 생성된 메소드 스텁
+		Calculator cal = new Calculator();
+		System.out.print(cal.add(10));
+		Scanner scanner = new Scanner; 
+
+	}
+
+}

@@ -1,0 +1,9 @@
+package pack02;
+
+public class ReturnMain {
+
+	public static void main(String[] args) {
+		ReturnMain rc = new ReturnMain();
+	}
+
+}

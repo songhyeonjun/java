@@ -1,0 +1,20 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JDBC_Insert {
+	public static void main(String[] args) {
+		Connection con = null;
+		String url  = "jdbc:mariadb://localhost:3306/sharedb";
+		String user = "sharedb";
+		String pw   = "p@ss00";
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			
+			con = DriverManager.getConnection(url, user, pw);
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;second_project.Ex22&apos; to &apos;Ex2&apos;&#x0D;&#x0A;- Original project: &apos;second_project&apos;&#x0D;&#x0A;- Original element: &apos;second_project.Ex22&apos;&#x0D;&#x0A;- Renamed element: &apos;second_project.Ex2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Ex22&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;second_project{Ex22.java[Ex22" matchStrategy="1" name="Ex2" qualified="false" references="true" similarDeclarations="false" stamp="1640767620934" textual="false" version="1.0"/>
+</session>

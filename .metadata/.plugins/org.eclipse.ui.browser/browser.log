@@ -1,0 +1,7 @@
+
+2월 16, 2022 18:18:10.19 NEW SESSION
+2월 16, 2022 18:18:10.19 [10652:12484:0216/181810.190:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+2월 16, 2022 18:18:10.19 [10652:12484:0216/181810.193:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+2월 16, 2022 18:18:10.19 [10652:12484:0216/181810.193:ERROR:chrome_browser_main_extra_parts_metrics.cc(235)] START: GetDefaultBrowser(). If you don't see the END: message, this is crbug.com/1216328.
+2월 16, 2022 18:18:10.19 [10652:12484:0216/181810.198:ERROR:chrome_browser_main_extra_parts_metrics.cc(239)] END: GetDefaultBrowser()
+2월 16, 2022 18:18:10.20 [10652:9972:0216/181810.203:ERROR:device_event_log_impl.cc(214)] [18:18:10.204] Bluetooth: bluetooth_adapter_winrt.cc:1075 Getting Default Adapter failed.

@@ -1,0 +1,20 @@
+package pack01;
+
+public class ReturnClass {
+	public int add(int x, int y) {
+		retrunt x + y;
+	}
+	public  add(double x, int y) {
+		retrunt x + y;
+	}
+	public  add(String x, Sting y) {
+		retrunt x + y;
+	}
+	public  add(int x, String y) {
+		retrunt x + y;
+	}
+	public  add() {
+		int[] x = {1, 2, 3};
+		retrunt x;
+	}
+}

@@ -1,0 +1,32 @@
+package jdbc;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class JDBC_Test {
+
+	public static void main(String[] args) {
+		Connection con = null;
+		String url = "jdbc:mariadb://localhost:3306/sharedb";
+		String user = "sharedb";
+		String pw = "p@ss00";
+		
+		try {
+			//1. JDBC 드라이버 로딩
+			Class.forName("org.mariadb.jdbc.Driver");
+			//Class.forName("org.postgresql.Driver");
+			System.out.println("JDBC 드라이버 로딩 성공~");
+			
+			//2. Connection 생성
+			con = DriverManager.getConnection(url, user, pw);
+			
+		} catch (ClassNotFoundException) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			System.out.println("무조건 실행~");
+		}
+	}
+
+}

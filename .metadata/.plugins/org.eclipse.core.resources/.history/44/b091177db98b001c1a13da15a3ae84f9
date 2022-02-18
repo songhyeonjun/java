@@ -1,0 +1,14 @@
+package pack01;
+
+public class MyWindow {
+
+	public static void main(String[] args) {
+		// 필요한 부품들 정리
+		// 정체 틀
+		new jFrame();
+		// 버튼 2개
+		// 글자
+		// 색
+	}
+
+}
