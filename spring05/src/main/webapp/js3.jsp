@@ -30,7 +30,7 @@
  <button id="b1">오늘 일정은?</button>
  <button id="b2">오늘 점심 메뉴는?</button>
 <div id="dialog1" title="오늘 점심 메뉴는?">
-  <p style="visibility:hidden">궁금하네요</p>
+  <p style="visibility: hidden">궁금하네요</p>
 </div>
 <div id="dialog2" title="오늘 일정은?">
   <p style="visibility:hidden">수업!!!</p>
