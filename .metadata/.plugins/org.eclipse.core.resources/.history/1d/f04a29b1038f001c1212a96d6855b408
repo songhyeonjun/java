@@ -1,8 +1,0 @@
-package com.hi.mvc03;
-
-public class BookVO {
-	private int id;
-	private String name;
-	private String url;
-	private String img;
-}

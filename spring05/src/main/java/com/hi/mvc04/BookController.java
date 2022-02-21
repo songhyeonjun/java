@@ -1,7 +1,9 @@
 package com.hi.mvc04;
 
+import java.util.List;
 import java.util.Random;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +13,11 @@ public class BookController {
 	//@
 	//hera@naver.com (at -에)
 	//Annotation (표시, 어노테이션)
+	
+	@Autowired
+	BookDAO dao; //주소주입!!
+	//회원과 관련된 여러가지 제어를 담당하는 클래스 
+	//회원가입,검색,수정,탈퇴,로그인 기능을 제어함.
 	
 	@RequestMapping("money.do")
 	public void ajax3(double money, int choice, Model model) {
@@ -57,8 +64,21 @@ public class BookController {
 	}
 	
 	@RequestMapping("insert.do")
-	public void insert(BookVO vo, BookDAO dao) throws Exception {
+	public void insert(BookVO vo, BookDAO dao) {
 		System.out.println("북마크 제어 요청됨.");
 		dao.create(vo);
+	}
+	
+	@RequestMapping("all2")
+	public void all(Model model) {
+		List<BookVO> list = dao.all();
+		model.addAttribute("list", list);
+		System.out.println(list.size());
+	}
+	
+	@RequestMapping("one2")
+	public void one(BookVO vo, Model model) {
+		BookVO one = dao.read(vo);
+		model.addAttribute("one", one);
 	}
 }
