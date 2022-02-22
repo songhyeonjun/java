@@ -7,6 +7,8 @@ C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\14193
 \spring00\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3693351762.index
 \spring02\src\main\java
+C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3998998547.index
+\springBootStrap\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\541205497.index
 \spring02\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3163418729.index
@@ -21,6 +23,8 @@ C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\24116
 \spring01\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\150321614.index
 \spring05\src\main\java
+C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1162234007.index
+\springBootStrap\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1535301649.index
 \spring03\src\main\java
 C:\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2588018732.index

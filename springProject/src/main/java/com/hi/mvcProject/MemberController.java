@@ -36,16 +36,22 @@ public class MemberController {
 	}
 
 	@RequestMapping("create")
-	public void create(MemberVO vo) throws Exception {
+	public String create(MemberVO vo) throws Exception {
 		System.out.println("회원가입 제어 요청됨.");
-		//1. 입력한 값 받아오기 
-		//2. vo만들어서 넣기.
-		System.out.println(vo);
-		//3. dao한테 vo주면서 create호출(요청)
-		dao.create(vo);
+		int result = dao.create(vo);
+		
+		if(result == 1) {
+			return "ok";
+		}
+		else {
+			return "create";
+		}
 		
 	}
-	//create라고 요청이 들어오면 
-	//회원가입 기능을 처리해주세요.
-		
+	
+	@RequestMapping("logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:member.jsp";
+	}
 }

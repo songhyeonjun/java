@@ -6,6 +6,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="resources/css/project.css">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<div id="total">
@@ -16,6 +26,7 @@
 			<jsp:include page="top2.jsp"></jsp:include>
 		</div>
 		<div id="center">
+		<% if(session.getAttribute("userId") == null) { %>
 			<h3>회원가입</h3>
 			<form action="create">
 				<table>
@@ -37,7 +48,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-						<button type="submit">서버로 전송</button>
+						<button style="width: 200px; height: 50px;" type="submit" class="btn-success">회원가입</button>
 						</td>
 					</tr>
 				</table>
@@ -56,11 +67,17 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-						<button type="submit">서버로 전송</button>
+						<button style="width: 200px; height: 50px;" type="submit" class="btn-info" >로그인</button>
 						</td>
 					</tr>
 				</table>
 			</form>
+			<% } else {%>
+			<span style="color:red; font-size: 20px; font-weight: bold;">${userName}님!! 환영합니다. 아이디가 ${userId}로 로그인 되었습니다.</span>
+			<a href="logout">
+			<button style="width:200px; height:50px;" class="btn btn-success" >로그아웃</button>
+			</a>
+			<% } %>
 		</div>
 	</div>
 </body>
