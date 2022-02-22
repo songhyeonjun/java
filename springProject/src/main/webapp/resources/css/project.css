@@ -1,0 +1,110 @@
+@charset "UTF-8";
+#total {
+	width: 800px;
+	height: 800px;
+	background-image: url(../img/back.png)
+}
+
+#top{
+	width: 800px;
+	height: 100px;
+	background: lime;
+}
+
+#top2{
+	width: 250px;
+	height: 100px;
+	background: black;
+	color: yellow;
+	top: 5px;
+	right: 5px;
+	position: fixed;
+	border-top: 10px solid aqua;
+	border-bottom: 10px double white;
+	box-shadow: 10px 10px yellow;
+	border-radius: 100px 10px;
+}
+
+#center{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+body {
+	color: blue;
+	font-size: 20px;
+}
+
+li {
+	list-style: none;
+	float: left;
+	padding: 20px;
+	width: 80px;
+	height: 50px;
+	/*  background: orange; */
+}
+
+li:first-child {
+	border-radius: 20px 0 0 20px;
+}
+
+li:last-child {
+	border-radius: 0 20px 20px 0;
+}
+
+li:nth-child(2n) {
+	background: orange;
+}
+
+li:nth-child(2n+1) {
+	background: pink;
+}
+
+li:hover {
+	
+}
+
+td {
+	font-size: 20px;
+}
+
+td:hover {
+	background: pink;
+}
+
+
+a { /* 기본선택자 : 태그, 아이디, 클래스 */
+	text-decoration: none;
+}
+
+a:hover { /* 마우스를 올렸을 때  : 가상선택자*/ 
+	background: repeat-y;
+	color: white;
+}
+
+a:visited { /* 마우스를 클릭하고 나서 */
+		color: inherit;
+}
+
+button {
+	background: gold;
+	font-size: 15px;
+}
+
+.left {
+	background: lightgray;
+}
+
+.right {
+	height: 30px;
+	width: 150px;
+}
+
+input {
+	height: 30px;
+	width: 150px;
+}
+
+h3 {
+	background: white;
+}
