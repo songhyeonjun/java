@@ -28,5 +28,5 @@ public class MemberDAO {
 	public MemberVO login(MemberVO vo) {
 		return my.selectOne("member.login", vo);
 	}
-
+	
 }

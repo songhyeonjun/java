@@ -19,6 +19,29 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+<script>
+	$(function() { // 장바구니
+		$('#plus').click(function() {
+			$.ajax({
+				url : 'plus',
+				data : {
+					id : ${one.id},
+					name : '${one.name}',
+					price : ${one.price}
+				},
+				success : function(result) {
+					alert(result);
+					if(confirm("장바구니를 확인 하시겠습니까?")) {
+						loction.href="basket.jsp";
+					}
+				},
+				error : function() {
+					alert("ajax 에러발생");
+				}
+			});
+		});
+	});
+</script>
 </head>
 <body>
 	<div id="total">
@@ -53,10 +76,7 @@
 				</tr>
 
 			</table>
-
-		</div>
-	</div>
-	<a href="product.jsp">
+			<a href="product.jsp">
 		<button style="width: 200px; height: 50px;">전체목록</button>
 	</a>
 	<tr>
@@ -66,5 +86,9 @@
 			</button>
 		</td>
 	</tr>
+
+		</div>
+	</div>
+	
 </body>
 </html>

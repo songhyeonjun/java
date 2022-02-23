@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Book"/>
+		<item key="selection" value="img"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="img"/>
 			<item value="Member"/>
 			<item value="member"/>
 			<item value="login"/>
@@ -22,7 +23,6 @@
 			<item value="id"/>
 			<item value="jsp"/>
 			<item value="dele"/>
-			<item value="SimpleDateFormat format1 = new SimpleDateFormat(&quot;yyyy.MM.dd&quot;);"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Book"/>

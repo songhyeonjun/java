@@ -13,6 +13,7 @@
 	<insert id="create" parameterType="memberVO">
 		insert into member values (#{id}, #{pw}, #{name}, #{tel})
 	</insert>
+	<delete id=""></delete>
 
 	
 </mapper>
