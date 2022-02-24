@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="review">
+	
+
+	<select id="list" parameterType="bbsVO" resultType="replyVO">
+		select * from review where bbsid = #{id};
+	</select>
+	
+
+	<insert id="insert" parameterType="rVO">
+		insert into reply values (null, #{bbsId}, #{content}, #{writer})
+	</insert>
+	
+	<delete id="delete" parameterType="replyVO">
+		delete from review where rid = #{id}
+	</delete>
+
+	
+</mapper>

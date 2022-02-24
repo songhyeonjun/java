@@ -13,6 +13,9 @@ public class BbsController {
 	@Autowired
 	BbsDAO dao;
 	
+	@Autowired
+	ReplyDAO dao2;
+	
 	@RequestMapping("bbsList")
 	public void list(BbsVO vo, Model model) {
 		List<BbsVO> list = dao.list();
@@ -20,8 +23,13 @@ public class BbsController {
 	}
 	@RequestMapping("bbsOne")
 	public void one(BbsVO vo, Model model) {
+		//게시물 1개짜리 vo2
+		//replyList
 		BbsVO vo2 = dao.one(vo);
 		model.addAttribute("one", vo2);
+		
+		List<ReplyVO> list = dao2.list(vo);
+		model.addAttribute("list", list);
 	}
 	@RequestMapping("bbsIn")
 	public void insert(BbsVO vo, Model model) {
@@ -41,10 +49,21 @@ public class BbsController {
 	}
 	@RequestMapping("bbsUp")
 	public void update(BbsVO vo, Model model) {
-		
+		// 수정하기 버튼을 누르면, 기존의 db에 저장된 데이터를
+		// 가지고 와서, 수정할 수 있는 화면에 넣어 주어야 한다.
+		BbsVO vo2 = dao.one(vo);
+		model.addAttribute("one", vo2);
 	}
 	@RequestMapping("bbsUp2")
-	public void update2(BbsVO vo, Model model) {
+	public String update2(BbsVO vo, Model model) {
+		// 수정하고 싶은 것이 있으면 수정처리 요청
+		int result = dao.up(vo);
+		if(result == 1) {
+			return "bbsUp2";
+		}
+		else {
+			return "no";
+		}
 		
 	}
 }

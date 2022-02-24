@@ -19,6 +19,26 @@
 <script type="text/javascript" src="resources/js/jquery-3.4.1.js"></script>
 <script type="text/javascript">
 	$(function() {
+		$('#insertBtn').click(function() {
+			$.ajax({
+				url : "replyInsert",
+				data : {
+					bbsId : ${one.id},
+					content : $('#reply').val(),
+					writer : '${userId}'
+				},
+				success: function(result) {
+					$('reply').val('')
+					$('#replyTable').append(result + "<br>");
+					// 성공하면, 현제 목록 아래에 붙여넣기!
+					// alert('성공' + result);
+				},
+				error: function() {
+					alert("ERROR!");
+				}
+			});
+		});
+		
 		$('#del').click(function() {
 			if(confirm("정말로 삭제 하시겠습니까?")) {
 				// controller의 bbsDel 요청 후,
@@ -42,8 +62,8 @@
 					}
 				});
 			}
-				
 		});
+		
 	});
 </script>
 <style>
@@ -72,13 +92,15 @@
 			<a href="bbs.jsp">
 				<button style="width: 200px; height: 50px;" class="btn btn-success">게시물
 					전체 목록으로!</button>
-			</a><br>
+			</a>
+			<hr>
+			<br>
 			
 			<!-- 로그인한 사람과 작성자가 동일하면
 			수정, 삭제 버튼을 나타나게 한다.
 			세션값과 one.writer가 동일하면.. -->
 			<c:if test="${userId eq one.writer}">
-			<a href="bbsUpdate.jsp">
+			<a href="bbsUp?id=${one.id}">
 				<button style="width: 200px; height: 50px;" class="btn btn-success">수정하기</button>
 			</a> 
 				<button id="del" style="width: 200px; height: 50px;" class="btn btn-success">삭제하기</button>
@@ -103,6 +125,31 @@
 					<td class="right">${one.writer}</td>
 				</tr>
 			</table>
+			<hr color=green>
+			
+			<table id="replyTable">
+			<% if(session.getAttribute("userId") != null) { %>
+			<tr>
+				<td>
+					Reply : <input id="reply" style="width: 300px;">
+					<button id="insertBtn" style="width: 50px;">OK</button>
+				</td>
+			</tr>
+			<%} %>
+			<c:forEach var="one" items="${list}">
+				<tr>
+					<td style="background: green; width: 500px; text-align: left; padding-left: 10px">
+						<img src="resources/img/re.png" width="30" height="30"> ${one.content} - ${one.writer}
+					</td>
+					<td style="background: green; width: 50px; text-align: right; padding-left: 10px">
+					<c:if test="${userId eq one.writer}">
+						<button id="deleteBtn">X</button>
+					</c:if>
+					</td>
+				</tr>
+			</c:forEach>
+			</table>
+			
 
 		</div>
 	</div>
