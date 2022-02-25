@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="img"/>
+		<item key="selection" value=""/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="bbs"/>
 			<item value="img"/>
 			<item value="Member"/>
 			<item value="member"/>
@@ -22,7 +23,6 @@
 			<item value="m_id"/>
 			<item value="id"/>
 			<item value="jsp"/>
-			<item value="dele"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Book"/>
@@ -32,7 +32,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="8"/>
+		<item key="DIALOG_X_ORIGIN" value="-308"/>
 		<item key="DIALOG_Y_ORIGIN" value="288"/>
 		<item key="DIALOG_WIDTH" value="324"/>
 		<item key="DIALOG_HEIGHT" value="391"/>

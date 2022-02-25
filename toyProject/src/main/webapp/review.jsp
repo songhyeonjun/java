@@ -1,26 +1,66 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    
-<table id="reviewTable">
-			<% if(session.getAttribute("userId") != null) { %>
-			<tr>
-				<td>
-					Reply : <input id="reply" style="width: 300px;">
-					<button id="insertBtn" style="width: 50px;">OK</button>
-				</td>
-			</tr>
-			<%} %>
-			<c:forEach var="one" items="${list}">
-				<tr>
-					<td style="background: green; width: 500px; text-align: left; padding-left: 10px">
-						<img src="resources/img/re.png" width="30" height="30"> ${one.content} - ${one.writer}
-					</td>
-					<td style="background: green; width: 50px; text-align: right; padding-left: 10px">
-					<c:if test="${userId eq one.writer}">
-						<button id="deleteBtn">X</button>
-					</c:if>
-					</td>
-				</tr>
-			</c:forEach>
-			</table>
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="resources/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// alert('test...');
+		$.ajax({
+			url : "rList2", //views/rList.jsp가 결과!
+			data :{
+				mvId : '<%= request.getParameter("mvId") %>'
+			},
+			success: function(result) { //결과가 담겨진 table부분코드
+				$('#d1').html(result);
+			},
+			error: function() {
+				alert('실패.@@@');
+			}
+		});
+	});
+</script>
+<style>
+	td{
+		background: white;
+		height: 30px;
+	}
+</style>
+</head>
+<body>
+<%-- 	<div id="total">
+		<div id="top">
+			<jsp:include page="top.jsp"></jsp:include>
+		</div>
+		<div id="top2">
+			<jsp:include page="top2.jsp"></jsp:include>
+		</div> --%>
+		<div id="center">
+			<h3>리뷰 목록</h3>
+			<hr color="red">
+
+			<%-- <% if(session.getAttribute("userId") != null) { %>
+			${userId}님 로그인되었습니다. --%>
+			<a href="rInsert.jsp">
+				<button style="width:100px; height:50px;" class="btn btn-success" >리뷰작성</button>
+			</a>
+			<%-- <% } %> --%>
+			<hr>
+			<div id="d1"></div>
+	</div>
+</body>
+</html>

@@ -16,15 +16,17 @@
 <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<link rel="stylesheet"
-	href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
 <link rel="stylesheet" type="text/css" href="resources/css/project.css">
 <script type="text/javascript" src="resources/js/jquery-3.4.1.js"></script>
 <script type="text/javascript">
 	
 </script>
+<style>
+td {
+	background: white;
+	height: 30px;
+}
+</style>
 </head>
 <body>
 	<div id="total">
@@ -35,20 +37,24 @@
 			<jsp:include page="../../top2.jsp"></jsp:include>
 		</div>
 		<div id="center">
-			<p>게시물 등록이 완료되었습니다.</p>
-			<hr color="red">
-			
-			<a href="bbsOne?id=${id}">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">작성한 글확인</button>
-			</a> 
-			
-			<a href="bbs.jsp">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">목록보기</button>
-			</a> 
-			
-			<a href="bbsInsert.jsp">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">글쓰기</button>
-			</a>
+			<form action="bbsUp2">
+				<div class="form-group">
+					<label for="title">title:</label> 
+					<input type="text"
+						class="form-control" name="title" value="${one.title}">
+				</div>
+				<div class="form-group">
+					<label for="content">content:</label> 					
+					<textarea rows="5" cols="5" class="form-control" name="content"
+						style="background: yellow;color: green; font-weight: bold;"
+					>${one.content}</textarea>
+				</div>
+				<div class="form-group">
+					<input type="hidden" name="id"
+						 value="${one.id}">
+				</div>
+				<button type="submit" class="btn btn-success">Submit</button>
+			</form>
 		</div>
 	</div>
 </body>

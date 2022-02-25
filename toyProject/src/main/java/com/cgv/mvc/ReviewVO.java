@@ -4,7 +4,7 @@ public class ReviewVO {
 
 	private int rId;
 	private String mId;
-	private String mvTitle;
+	private String mvId;
 	private String rComment;
 	private int rRating;
 	private String mvImg;
@@ -20,11 +20,11 @@ public class ReviewVO {
 	public void setmId(String mId) {
 		this.mId = mId;
 	}
-	public String getMvTitle() {
-		return mvTitle;
+	public String getMvId() {
+		return mvId;
 	}
-	public void setMvTitle(String mvTitle) {
-		this.mvTitle = mvTitle;
+	public void setMvId(String mvId) {
+		this.mvId = mvId;
 	}
 	public String getrComment() {
 		return rComment;
@@ -46,7 +46,7 @@ public class ReviewVO {
 	}
 	@Override
 	public String toString() {
-		return "rVO [rId=" + rId + ", mId=" + mId + ", mvTitle=" + mvTitle + ", rComment=" + rComment + ", rRating="
+		return "rVO [rId=" + rId + ", mId=" + mId + ", mvId=" + mvId + ", rComment=" + rComment + ", rRating="
 				+ rRating + ", mvImg=" + mvImg + "]";
 	}
 }

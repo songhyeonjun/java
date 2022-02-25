@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="springFinalProject"/>
-<aop-project name="spring02"/>
-<aop-project name="spring03"/>
-<aop-project name="spring04"/>
-<aop-project name="spring05"/>
-<aop-project name="spring06"/>
+<aop-project name="toyProject"/>
 <aop-project name="springBootStrap"/>
 <aop-project name="springProject"/>
 </aop-reference-model>

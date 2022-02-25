@@ -2,21 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="reply">
-	
+<mapper namespace="review">
 
-	<select id="list" parameterType="bbsVO" resultType="replyVO">
-		select * from review where mvId = ${id};
+	<select id="createdId" resultType="reviewVO">
+	 	select * from review order by rid desc limit 1
 	</select>
-	
-
-	<insert id="insert" parameterType="replyVO">
-		insert into reply values (null, #{bbsId}, #{content}, #{writer})
+	<insert id="in" parameterType="reviewVO">
+		insert into review values (null,
+		#{title}, #{content}, #{writer})
 	</insert>
-	
-	<delete id="delete" parameterType="replyVO">
-		delete from reply where rid = #{id}
+	<update id="up" parameterType="reviewVO">
+		update review set title = #{title},
+		content = #{content} where rid = #{id}
+	</update>
+	<delete id="del" parameterType="reviewVO">
+		delete from review where rId = #{rId}
 	</delete>
-
-	
+	<select id="one" parameterType="reviewVO" resultType="reviewVO">
+		select * from
+		review where rId = #{rId}
+	</select>
+	<select id="all" resultType="reviewVO">
+		select * from review
+	</select>
+	<select id="list"  parameterType="reviewVO"  resultType="reviewVO">
+		select * from review where mvId = #{mvId}
+	</select>
 </mapper>

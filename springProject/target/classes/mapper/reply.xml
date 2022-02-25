@@ -10,7 +10,7 @@
 	</select>
 	
 
-	<insert id="insert" parameterType="rVO">
+	<insert id="insert" parameterType="replyVO">
 		insert into reply values (null, #{bbsId}, #{content}, #{writer})
 	</insert>
 	

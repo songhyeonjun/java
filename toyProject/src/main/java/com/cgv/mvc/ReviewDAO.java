@@ -8,19 +8,31 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ReviewDAO {
-	
+
 	@Autowired
-	SqlSessionTemplate my; // di
+	SqlSessionTemplate my;
 	
-	public List<ReviewVO> all() {
-		return my.selectList("review.list");
+	public ReviewVO createdId() {
+		return my.selectOne("review.createdId");
 	}
 	
-	public int reviewInsert(ReviewVO vo) {
-		return my.insert("review.insert", vo);
+	public List<ReviewVO> listAll() {
+		return my.selectList("review.all");
 	}
-	
-	public void reviewDelete(ReviewVO vo) {
-		my.delete("review.delete", vo);
+	public List<ReviewVO> list(ReviewVO vo) {
+		System.out.println("dao: " +  vo);
+		return my.selectList("review.list", vo);
+	}
+	public ReviewVO one(ReviewVO vo) {
+		return my.selectOne("review.one", vo);
+	}
+	public int insert(ReviewVO vo) {
+		return my.insert("review.in", vo);
+	}
+	public int up(ReviewVO vo) {
+		return my.update("review.up", vo);
+	}
+	public int del(ReviewVO vo) {
+		return my.delete("review.del", vo);
 	}
 }
