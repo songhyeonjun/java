@@ -31,7 +31,7 @@ $(function() {
 				},
 				success : function(result) {
 					if(result == '1'){
-						location.href = "review.jsp"
+						location.href = "review2.jsp"
 					}
 				}
 			});
@@ -52,18 +52,24 @@ $(function() {
 </style>
 </head>
 <body>
-	<%-- <div id="total">
-		<div id="top">
+	<div id="total">
+		<div id="menu">
 			<jsp:include page="../../top.jsp"></jsp:include>
 		</div>
-		<div id="top2">
-			<jsp:include page="../../top2.jsp"></jsp:include>
+		<% if(session.getAttribute("mId") == null) { %>
+		<div id="memberTop">
+			<jsp:include page="../../mTop.jsp"></jsp:include>
 		</div>
-		<div id="center">
+		<% }else{ %>
+		<div id="memberTop">
+			<jsp:include page="../../mTop4.jsp"></jsp:include>
+		</div>
+		<% } %>
+		<%--<div id="center">
 			<span style="font-size: 25px;">게시물 상세 페이지</span>
 			<hr color=red> --%>
 
-			<a href="review.jsp">
+			<a href="review2.jsp">
 				<button style="width: 200px; height: 50px;" class="btn btn-success">게시물
 					전체 목록으로!</button>
 			</a>
@@ -71,13 +77,13 @@ $(function() {
 				수정, 삭제 버튼을 나타나게 해주자.
 				세션값과 one.writer가 동일하면!!
 			 -->
-			 <%--  <c:if test="${userId eq one.writer}"> --%>
+			   <c:if test="${mId eq one.mId}"> 
 				<a href="rUpdate?rId=${one.rId}">
 					<button style="width: 200px; height: 50px;" class="btn btn-success">수정하기</button>
 				</a> 
 				<button id="del" style="width: 200px; height: 50px;" class="btn btn-success">삭제하기</button>
 				
-			<%-- </c:if> --%> 
+			 </c:if> 
 			
 			<hr color=red>
 			<table width="500px">

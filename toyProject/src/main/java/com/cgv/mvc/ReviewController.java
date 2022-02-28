@@ -14,27 +14,25 @@ public class ReviewController {
 
 	@Autowired
 	ReviewDAO dao;
-
+	@Autowired
+	MovieDAO mvdao;
+	
 	@RequestMapping("rList")
-	public void list(Model model) {
+	public void list(ReviewVO vo, Model model) {
 
-		List<ReviewVO> list = dao.listAll();
-		System.out.println("2:" + list.size());
-		System.out.println(list);
+		List<ReviewVO> list = dao.list(vo);
 		model.addAttribute("list", list);
-
 	}
 
 	@RequestMapping("rList2")
-	public void list2(ReviewVO vo, Model model) {
+	public void list2(Model model) {
 
-		System.out.println("1: " + vo);
-		List<ReviewVO> list = dao.list(vo);
-		System.out.println("2:" + list.size());
-		System.out.println(list);
+		List<ReviewVO> list = dao.listAll();
+
 		model.addAttribute("list", list);
-
 	}
+
+	
 
 	@RequestMapping("rOne")
 	public void one(ReviewVO vo, Model model) {
@@ -51,13 +49,15 @@ public class ReviewController {
 	public void insert(ReviewVO vo, Model model, HttpSession session) {
 		int result = dao.insert(vo);
 		ReviewVO vo2 = dao.createdId();
+		
+		System.out.println(vo2);
 		String text = "게시물 작성 성공";
 		if (result != 1) {
 			text = "게시물 작성 실패";
 		}
 		model.addAttribute("result", text);
-		session.setAttribute("mId", "root"); // 나중에 바꿀 부분
-//		model.addAttribute("id", vo2.getId());
+		session.setAttribute("mId", "kim"); // 나중에 바꿀 부분
+		model.addAttribute("rId", vo2.getrId());
 	}
 
 	@RequestMapping("rDelete")
@@ -78,9 +78,11 @@ public class ReviewController {
 	public String update2(ReviewVO vo, Model model) {
 		// 수정하고 싶은 것이 있으면 수정처리 요청
 		int result = dao.up(vo);
+	
 		if (result == 1) {
-			return "rUpdate";
-		} else {
+			return "rUpdate2";
+		} 
+		else {
 			return "no";
 		}
 

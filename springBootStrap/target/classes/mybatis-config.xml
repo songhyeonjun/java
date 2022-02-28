@@ -8,7 +8,7 @@
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="stockMapper.xml" />
+		<mapper resource="mapper/stock.xml" />
 	</mappers>
 </configuration>
 

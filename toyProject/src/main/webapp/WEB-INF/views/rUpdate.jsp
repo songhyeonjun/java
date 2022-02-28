@@ -29,28 +29,37 @@ td {
 </style>
 </head>
 <body>
-<%-- 	<div id="total">
-		<div id="top">
+ 	<div id="total">
+		<div id="menu">
 			<jsp:include page="../../top.jsp"></jsp:include>
 		</div>
-		<div id="top2">
-			<jsp:include page="../../top2.jsp"></jsp:include>
-		</div> --%>
+		<% if(session.getAttribute("mId") == null) { %>
+		<div id="memberTop">
+			<jsp:include page="../../mTop.jsp"></jsp:include>
+		</div>
+		<% }else{ %>
+		<div id="memberTop">
+			<jsp:include page="../../mTop4.jsp"></jsp:include>
+		</div>
+		<% } %>
 		<div id="center">
 			<form action="rUpdate2">
+				<label for="rRating">평점 : </label> <select class="form-control"
+						id="rRating" name="rRating">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
 				<div class="form-group">
-					<label for="title">평점 : </label> 
-					<input type="text"
-						class="form-control" name="title" value="${one.rRating}">
-				</div>
-				<div class="form-group">
-					<label for="content">감상평 : </label> 					
-					<textarea rows="5" cols="5" class="form-control" name="content"
-						style="background: yellow;color: green; font-weight: bold;"
+					<label for="rComment">감상평 : </label> 					
+					<textarea rows="5" cols="5" class="form-control" name="rComment"
+						style="background: yellow; color: green; font-weight: bold;"
 					>${one.rComment}</textarea>
 				</div>
 				<div class="form-group">
-					<input type="hidden" name="id"
+					<input type="hidden" name="rId"
 						 value="${one.rId}">
 				</div>
 				<button type="submit" class="btn btn-success">수정하기</button>

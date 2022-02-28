@@ -14,8 +14,6 @@
 	   <td class="right"><a href="rOne?rId=${one.rId}">${one.mvId}</a></td>
 	   <td class="right">${one.rRating}</td>   
 	   <td class="right">${one.mId}</td> <!-- one.getId() -->
-	     
-     
    </tr>
    </c:forEach>
 </table>

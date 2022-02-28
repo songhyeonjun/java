@@ -8,12 +8,11 @@
 	 	select * from review order by rid desc limit 1
 	</select>
 	<insert id="in" parameterType="reviewVO">
-		insert into review values (null,
-		#{title}, #{content}, #{writer})
+		insert into review values (null, #{mId}, #{mvId}, #{rComment}, #{rRating}, #{mvImg})
 	</insert>
 	<update id="up" parameterType="reviewVO">
-		update review set title = #{title},
-		content = #{content} where rid = #{id}
+		update review set rRating = #{rRating},
+		rComment = #{rComment} where rId = #{rId}
 	</update>
 	<delete id="del" parameterType="reviewVO">
 		delete from review where rId = #{rId}

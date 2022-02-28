@@ -3,39 +3,50 @@ package com.hi.mvc01;
 public class StockVO {
 	private String code;
 	private String company;
-	private String today;
-	private String yesterday;
-	private String high;
+	private int today;
+	private int yesterday;
+	private int high;
+
 	public String getCode() {
 		return code;
 	}
+
 	public void setCode(String code) {
 		this.code = code;
 	}
+
 	public String getCompany() {
 		return company;
 	}
+
 	public void setCompany(String company) {
 		this.company = company;
 	}
-	public String getToday() {
+
+	public int getToday() {
 		return today;
 	}
-	public void setToday(String today) {
+
+	public void setToday(int today) {
 		this.today = today;
 	}
-	public String getYesterday() {
+
+	public int getYesterday() {
 		return yesterday;
 	}
-	public void setYesterday(String yesterday) {
+
+	public void setYesterday(int yesterday) {
 		this.yesterday = yesterday;
 	}
-	public String getHigh() {
+
+	public int getHigh() {
 		return high;
 	}
-	public void setHigh(String high) {
+
+	public void setHigh(int high) {
 		this.high = high;
 	}
+
 	@Override
 	public String toString() {
 		return "StockVO [code=" + code + ", company=" + company + ", today=" + today + ", yesterday=" + yesterday

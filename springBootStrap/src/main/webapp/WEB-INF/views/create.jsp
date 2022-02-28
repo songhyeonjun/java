@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Insert title here</title>
 </head>
 <body>
-	db에 보내기 성공@@@@@@@@@
+주식 정보가 저장되었습니다.
+<a href="finance.jsp">홈으로</a>
 </body>
 </html>
