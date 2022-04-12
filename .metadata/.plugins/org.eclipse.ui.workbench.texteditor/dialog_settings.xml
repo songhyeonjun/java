@@ -8,12 +8,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="user"/>
+			<item value="&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;"/>
 			<item value="bbs"/>
 			<item value="img"/>
 			<item value="Member"/>
 			<item value="member"/>
 			<item value="login"/>
-			<item value="user"/>
 			<item value="3306"/>
 			<item value="spri"/>
 			<item value="log"/>
@@ -22,7 +23,6 @@
 			<item value="Update"/>
 			<item value="m_id"/>
 			<item value="id"/>
-			<item value="jsp"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Book"/>
@@ -32,7 +32,7 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="-308"/>
+		<item key="DIALOG_X_ORIGIN" value="22"/>
 		<item key="DIALOG_Y_ORIGIN" value="288"/>
 		<item key="DIALOG_WIDTH" value="324"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
