@@ -30,6 +30,7 @@ public class ReviewController {
 		List<ReviewVO> list = dao.listAll();
 
 		model.addAttribute("list", list);
+		System.out.println(list);
 	}
 
 	
@@ -56,7 +57,6 @@ public class ReviewController {
 			text = "게시물 작성 실패";
 		}
 		model.addAttribute("result", text);
-		session.setAttribute("mId", "kim"); // 나중에 바꿀 부분
 		model.addAttribute("rId", vo2.getrId());
 	}
 

@@ -10,7 +10,7 @@
    </tr>
    <c:forEach items="${list}" var="one">
    <tr>
-	   <td class="right"><img src="resources/img/${one.mvImg}" width="100px" height="50px"></td>
+   	   <td class="right"><img src="${one.mvImg}" width="100px" height="50px"></td>
 	   <td class="right"><a href="rOne?rId=${one.rId}">${one.mvId}</a></td>
 	   <td class="right">${one.rRating}</td>   
 	   <td class="right">${one.mId}</td> <!-- one.getId() -->

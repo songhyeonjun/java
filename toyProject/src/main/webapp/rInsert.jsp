@@ -32,20 +32,19 @@ td {
 	<div id="total">
 		<div id="menu">
 			<jsp:include page="top.jsp"></jsp:include>
-		</div> 
-		<% if(session.getAttribute("mId") == null) { %>
+		</div>
 		<div id="memberTop">
 			<jsp:include page="mTop.jsp"></jsp:include>
 		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
-		<div id="center">
+			<span style="font-size: 25px;">리뷰 작성 페이지</span>
+			<hr color=red>
+			<div id="mvImg" style="float: left; width: 20%; text-align: center;">
+				<img src="${mvImg}" style="width: 90%">
+			</div>
 			<form action="rInsert">
 
 				<div class="form-group">
+
 					<label for="mvId">영화제목 : </label> <select class="form-control"
 						id="mvId" name="mvId">
 						<option>1</option>
@@ -64,14 +63,12 @@ td {
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="rComment">감상평 :</label> 					
+					<label for="rComment">감상평 :</label>
 					<textarea rows="5" cols="5" class="form-control" name="rComment"
-						style="background: yellow;color: green; font-weight: bold;"
-					></textarea>
+						style="background: yellow; color: green; font-weight: bold;"></textarea>
 				</div>
 				<div class="form-group">
-					<input type="hidden" name="mId"
-						 value="${mId}">
+					<input type="hidden" name="mId" value="${mId}">
 				</div>
 				<div class="form-group">
 					<label for="mvImg">이미지 : </label> <select class="form-control"
@@ -81,7 +78,7 @@ td {
 						<option>3.img</option>
 					</select>
 				</div>
-				
+
 				<button type="submit" class="btn btn-success">리뷰작성</button>
 			</form>
 		</div>

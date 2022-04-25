@@ -19,4 +19,13 @@
 		(#{mId}, #{mPw}, #{mEmail}, #{mPhone})
 	</insert>
 
+	<update id="up" parameterType="memberVO">
+		update member set mPw = #{mPw}, mEmail = #{mEmail}, mPhone = #{mPhone} Where
+		mId = #{mId}
+	</update>
+
+	<delete id="del" parameterType="memberVO">
+		delete from member where mId = #{mId}
+	</delete>
+
 </mapper>

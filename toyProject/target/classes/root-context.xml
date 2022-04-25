@@ -13,7 +13,7 @@
 		<constructor-arg ref="config"></constructor-arg>
 	</bean>
 
-	<!--   myBatis 설정만 담당하는 객체 생성 -->
+	<!-- myBatis 설정만 담당하는 객체 생성 -->
 	<bean id="config" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dbcp"></property>
 		<property name="configLocation"

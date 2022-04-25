@@ -23,7 +23,7 @@ public class MemberController {
 		
 		if(vo2 != null) { //로그인 성공! 
 			session.setAttribute("mId", vo2.getmId());
-			return "redirect:mTop4.jsp";
+			return "redirect:movie.jsp";
 		}else {  
 			return "check";
 		}
@@ -36,8 +36,9 @@ public class MemberController {
 	}
 	
 	@RequestMapping("mDelete")
-	public void del(MemberVO vo) {
+	public void del(MemberVO vo, HttpSession session) {
 		int result = dao.del(vo);
+		session.invalidate();
 	}
 	@RequestMapping("login")
 	public void login() {
@@ -87,7 +88,7 @@ public class MemberController {
 	@RequestMapping("logout")
 	public String logout(HttpSession session) {
 		session.invalidate();
-		return "redirect:mTop.jsp";
+		return "redirect:movie.jsp";
 	}
 	
 	

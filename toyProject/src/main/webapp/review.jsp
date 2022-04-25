@@ -22,10 +22,10 @@
 		// alert('test...');
 		$.ajax({
 			url : "rList", //views/rList.jsp가 결과!
-			data :{
-				mvId : <%=request.getParameter("mvId")%>
-	
-			},
+			data : {
+				mvId :
+<%=request.getParameter("mvId")%>
+	},
 			success : function(result) { //결과가 담겨진 table부분코드
 				$('#d1').html(result);
 			},
@@ -44,30 +44,28 @@ td {
 </head>
 <body>
 	<div id="total">
-		<div id="total">
 		<div id="menu">
 			<jsp:include page="top.jsp"></jsp:include>
 		</div>
-		<% if(session.getAttribute("mId") == null) { %>
 		<div id="memberTop">
 			<jsp:include page="mTop.jsp"></jsp:include>
 		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
 		<div id="center">
 			<h3>리뷰 목록</h3>
 			<hr color="red">
 
-			<% if(session.getAttribute("mId") != null) { %>
+			<%
+				if (session.getAttribute("mId") != null) {
+			%>
 			<a href="rInsert.jsp">
 				<button style="width: 100px; height: 50px;" class="btn btn-success">리뷰작성</button>
 			</a>
-			<% } %> 
+			<%
+				}
+			%>
 			<hr>
 			<div id="d1"></div>
 		</div>
+	</div>
 </body>
 </html>

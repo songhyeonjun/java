@@ -23,34 +23,5 @@
 <link rel="stylesheet" type="text/css" href="resources/css/project.css">
 <script type="text/javascript" src="resources/js/jquery-3.4.1.js"></script>
 <script type="text/javascript">
-	
+	location.href="review2.jsp"
 </script>
-</head>
-<body>
-	<div id="total">
-		<div id="menu">
-			<jsp:include page="../../top.jsp"></jsp:include>
-		</div>
-		<% if(session.getAttribute("mId") == null) { %>
-		<div id="memberTop">
-			<jsp:include page="../../mTop.jsp"></jsp:include>
-		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="../../mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
-		<div id="center">
-			<p>${result}</p>
-			<hr color="red">
-			<a href="rOne?rId=${rId}">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">작성한 글확인</button>
-			</a> <a href="review2.jsp">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">목록보기</button>
-			</a> <a href="rInsert.jsp">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">글쓰기</button>
-			</a>
-		</div>
-	</div>
-</body>
-</html>

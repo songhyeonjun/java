@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,61 +56,61 @@ $(function() {
 		<div id="menu">
 			<jsp:include page="../../top.jsp"></jsp:include>
 		</div>
-		<% if(session.getAttribute("mId") == null) { %>
 		<div id="memberTop">
 			<jsp:include page="../../mTop.jsp"></jsp:include>
 		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="../../mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
 		<%--<div id="center">
 			<span style="font-size: 25px;">게시물 상세 페이지</span>
 			<hr color=red> --%>
 
-			<a href="review2.jsp">
-				<button style="width: 200px; height: 50px;" class="btn btn-success">게시물
-					전체 목록으로!</button>
-			</a>
-			<!-- 로그인한 사람과 작성자가 동일하면
+		<a href="review2.jsp">
+			<button style="width: 200px; height: 50px;" class="btn btn-success">게시물
+				전체 목록으로!</button>
+		</a>
+		<!-- 로그인한 사람과 작성자가 동일하면
 				수정, 삭제 버튼을 나타나게 해주자.
 				세션값과 one.writer가 동일하면!!
 			 -->
-			   <c:if test="${mId eq one.mId}"> 
-				<a href="rUpdate?rId=${one.rId}">
-					<button style="width: 200px; height: 50px;" class="btn btn-success">수정하기</button>
-				</a> 
-				<button id="del" style="width: 200px; height: 50px;" class="btn btn-success">삭제하기</button>
-				
-			 </c:if> 
-			
+					<span style="font-size: 25px;">리뷰 상세페이지</span>
 			<hr color=red>
-			<table width="500px">
-				<tr>
-					<td class="left">번호</td>
-					<td class="right">${one.rId}</td>
-					<!-- one.getId() -->
-				</tr>
-				<tr>
-					<td class="left">영화제목</td>
-					<td class="right">${one.mvId}</td>
-				</tr>
-				<tr>
-					<td class="left">감상평</td>
-					<td class="right" style="height: 100px;">${one.rComment}</td>
-				</tr>
-				<tr>
-					<td class="left">평점</td>
-					<td class="right">${one.rRating}</td>
-				</tr>
-				<tr>
-					<td class="left">작성자</td>
-					<td class="right">${one.mId}</td>
-				</tr>
-			</table>
-	<hr color=green>
-		</div>
+			<div id="mvImg" style="float: left; width: 20%; text-align: center;">
+				<img src="${one.mvImg}" style="width: 90%">
+			</div>
+		<c:if test="${mId eq one.mId}">
+			<a href="rUpdate?rId=${one.rId}">
+				<button style="width: 200px; height: 50px;" class="btn btn-success">수정하기</button>
+			</a>
+			<button id="del" style="width: 200px; height: 50px;"
+				class="btn btn-success">삭제하기</button>
+
+		</c:if>
+
+		<hr color=red>
+		<table width="500px">
+			<tr>
+				<td class="left">번호</td>
+				<td class="right">${one.rId}</td>
+				<!-- one.getId() -->
+			</tr>
+			<tr>
+				<td class="left">영화제목</td>
+				<td class="right">${one.mvId}</td>
+			</tr>
+			<tr>
+				<td class="left">감상평</td>
+				<td class="right" style="height: 100px;">${one.rComment}</td>
+			</tr>
+			<tr>
+				<td class="left">평점</td>
+				<td class="right">${one.rRating}</td>
+			</tr>
+			<tr>
+				<td class="left">작성자</td>
+				<td class="right">${one.mId}</td>
+			</tr>
+		</table>
+		<hr color=green>
+	</div>
 	</div>
 </body>
 </html>

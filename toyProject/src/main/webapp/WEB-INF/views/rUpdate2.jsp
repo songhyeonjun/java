@@ -24,19 +24,13 @@
 <script type="text/javascript" src="resources/js/jquery-3.4.1.js"></script>
 </head>
 <body>
-	 <div id="total">
+	<div id="total">
 		<div id="menu">
 			<jsp:include page="../../top.jsp"></jsp:include>
 		</div>
-		<% if(session.getAttribute("mId") == null) { %>
 		<div id="memberTop">
 			<jsp:include page="../../mTop.jsp"></jsp:include>
 		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="../../mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
 		<div id="center">
 			<br>
 			<p>수정이 완료되었습니다.!!</p>

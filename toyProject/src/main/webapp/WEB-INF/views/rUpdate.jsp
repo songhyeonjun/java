@@ -33,16 +33,15 @@ td {
 		<div id="menu">
 			<jsp:include page="../../top.jsp"></jsp:include>
 		</div>
-		<% if(session.getAttribute("mId") == null) { %>
 		<div id="memberTop">
 			<jsp:include page="../../mTop.jsp"></jsp:include>
 		</div>
-		<% }else{ %>
-		<div id="memberTop">
-			<jsp:include page="../../mTop4.jsp"></jsp:include>
-		</div>
-		<% } %>
 		<div id="center">
+							<span style="font-size: 25px;">리뷰 수정 페이지</span>
+			<hr color=red>
+			<div id="mvImg" style="float: left; width: 20%; text-align: center;">
+				<img src="${one.mvImg}" style="width: 90%">
+			</div>
 			<form action="rUpdate2">
 				<label for="rRating">평점 : </label> <select class="form-control"
 						id="rRating" name="rRating">
