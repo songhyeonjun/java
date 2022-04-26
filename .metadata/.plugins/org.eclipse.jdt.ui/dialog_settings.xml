@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="org.eclipse.jdt.ui.last.selected.jre.kind2" value="2"/>
-	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-13"/>
+	<item key="org.eclipse.jdt.ui.last.selected.execution.enviroment" value="JavaSE-1.8"/>
 	<item key="org.eclipse.jdt.ui.last.selected.create.moduleinfo" value="false"/>
 	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Users\hi\Downloads"/>
+	<item key="Annotations" value="true"/>
+	<item key="Replace" value="true"/>
+	<item key="Comments" value="true"/>
+	<item key="InstanceOf" value="false"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
@@ -123,5 +127,23 @@
 		<item key="expanded0" value="true"/>
 		<item key="expanded1" value="false"/>
 		<item key="expanded2" value="false"/>
+	</section>
+	<section name="DialogBounds_SuperInterfaceSelectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="85"/>
+		<item key="DIALOG_Y_ORIGIN" value="-47"/>
+		<item key="DIALOG_WIDTH" value="373"/>
+		<item key="DIALOG_HEIGHT" value="549"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item key="ShowStatusLine" value="true"/>
+		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;"/>
+		<section name="DialogBoundsSettings">
+			<item key="DIALOG_HEIGHT" value="500"/>
+			<item key="DIALOG_WIDTH" value="600"/>
+			<item key="DIALOG_X_ORIGIN" value="-29"/>
+			<item key="DIALOG_Y_ORIGIN" value="-14"/>
+			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+		</section>
 	</section>
 </section>
