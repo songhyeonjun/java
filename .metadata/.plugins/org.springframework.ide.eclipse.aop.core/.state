@@ -2,6 +2,6 @@
 <aop-reference-model>
 <aop-project name="toyProject"/>
 <aop-project name="testProject"/>
-<aop-project name="springBootStrap"/>
+<aop-project name="spring02"/>
 <aop-project name="springProject"/>
 </aop-reference-model>

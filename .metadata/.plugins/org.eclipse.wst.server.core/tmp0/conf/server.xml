@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\testProject" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:testProject"/><Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\toyProject" path="/mvc" reloadable="true" source="org.eclipse.jst.jee.server:toyProject"/></Host>
+      <Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\testProject" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:testProject"/><Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\toyProject" path="/mvc" reloadable="true" source="org.eclipse.jst.jee.server:toyProject"/><Context docBase="C:\eclipse-workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring02" path="/mvc02" reloadable="true" source="org.eclipse.jst.jee.server:spring02"/></Host>
     </Engine>
   </Service>
 </Server>
